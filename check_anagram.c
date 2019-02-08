@@ -18,6 +18,10 @@ int main()
     
 }
 
+/* The following funtion converts the letters in the word
+   to their ASCII format for easier sorting before passing them
+   as arguements to the insertion_sort function */
+
 int sort_word(char *word1, char *word2)
 {
   int n = strlen(word1);
@@ -25,7 +29,7 @@ int sort_word(char *word1, char *word2)
   for(int i=0;i<n-1;i++)
   {
     n_word1[i] = word1[i]-'A';
-  }
+  } 
   for(int i=0;i<n-1;i++)
   {
     n_word2[i] = word2[i]-'A';
@@ -35,6 +39,10 @@ int sort_word(char *word1, char *word2)
   
 
 }
+
+/*The following function performs insertion sort algorithm to 
+  sort the letters in the words before passing them as arguments
+  to the verify_anagram function*/
 
 void insertion_sort(char *word1,char *word2,int n)
 {
@@ -68,6 +76,9 @@ void insertion_sort(char *word1,char *word2,int n)
    verify_anagram(word1,word2,n);
   
 }
+
+/*The following function verifies if the two words are anagram
+  by comparing their sorted counterparts*/
 
 void verify_anagram(char *word1,char *word2,int n)
 {
